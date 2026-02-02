@@ -88,7 +88,6 @@ AI/ML:
 
  The Self-Correction Pipeline
 
-```mermaid
 graph LR
     AUser Question --> BRetrieve Documents
     B --> CGrade Relevance
@@ -102,7 +101,6 @@ graph LR
     H -->|No| J{Max Retries?}
     J -->|No| F
     J -->|Yes| KReturn Best Attempt
-```
 
  Core Components
 
@@ -130,7 +128,7 @@ graph LR
 └── README.md                This file
 ```
 
- 🔧 Configuration
+ Configuration
 
  Environment Variables
 
