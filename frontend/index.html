@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Self-Correcting RAG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <i class="fa-solid fa-brain"></i>
+                <span>Agentic RAG</span>
+            </div>
+            
+            <div class="upload-section">
+                <h3>Knowledge Base</h3>
+                <div class="file-drop-area" id="drop-zone">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <p>Drop PDF here or click</p>
+                    <input type="file" id="file-input" accept=".pdf" hidden>
+                </div>
+                <div id="file-list" class="file-list"></div>
+            </div>
+
+            <div class="config-section">
+                <h3>Settings</h3>
+                <div class="setting-item">
+                    <label>Temperature</label>
+                    <input type="range" class="slider" min="0" max="1" step="0.1" value="0.5">
+                </div>
+            </div>
+            
+            <div class="status-panel">
+                <div class="status-item">
+                    <span class="status-dot online"></span>
+                    System Ready
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat -->
+        <main class="chat-interface">
+            <header class="chat-header">
+                <h2>Session: <span class="highlight">Enterprise Evaluation</span></h2>
+                <div class="actions">
+                    <button class="icon-btn" title="Clear Chat"><i class="fa-solid fa-trash-can"></i></button>
+                    <button class="icon-btn" title="Export"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </header>
+
+            <div class="chat-messages" id="chat-messages">
+                <div class="message system-welcome">
+                    <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="content">
+                        <h3>Welcome to the Self-Correcting RAG System</h3>
+                        <p>I don't just answer; I verify. I will retrieve information, grade my own generation for hallucinations, and rewrite queries if I don't find what I need.</p>
+                        <p>Upload a PDF to get started.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <div class="input-wrapper">
+                    <textarea id="user-input" placeholder="Ask a complex question about your document..." rows="1"></textarea>
+                    <button id="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
