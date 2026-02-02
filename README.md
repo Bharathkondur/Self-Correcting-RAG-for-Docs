@@ -1,4 +1,4 @@
-# 🧠 Self-Correcting RAG System
+# 🧠 Self-Correcting RAG for Docs
 
 > **A production-ready Retrieval-Augmented Generation (RAG) system with automated self-correction capabilities**
 

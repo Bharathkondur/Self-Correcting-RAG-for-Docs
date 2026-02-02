@@ -22,7 +22,7 @@ from logging_config import setup_logging, get_logger
 setup_logging()
 logger = get_logger(__name__)
 
-app = FastAPI(title="Self-Correcting RAG API")
+app = FastAPI(title="Self-Correcting RAG for Docs API")
 
 # CORS
 app.add_middleware(
