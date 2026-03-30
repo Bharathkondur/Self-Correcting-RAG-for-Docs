@@ -51,7 +51,7 @@ AI/ML:
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/yourusername/self-correcting-rag.git
+   git clone https://github.com/Bharathkondur/self-correcting-rag.git
    cd self-correcting-rag
    ```
 
