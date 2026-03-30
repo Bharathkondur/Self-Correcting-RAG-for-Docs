@@ -217,7 +217,7 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 ```bash
  Clone your fork
-git clone https://github.com/yourusername/self-correcting-rag.git
+git clone https://github.com/Bharathkondur/self-correcting-rag.git
 
  Create feature branch
 git checkout -b feature/amazing-feature
