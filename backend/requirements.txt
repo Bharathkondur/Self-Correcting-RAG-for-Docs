@@ -1,35 +1,20 @@
-# Core Web Framework
-fastapi>=0.104.0
-uvicorn[standard]>=0.24.0
-python-multipart>=0.0.6
+# Web API
+fastapi>=0.115,<1
+uvicorn[standard]>=0.32,<1
+python-multipart>=0.0.12,<1
 
-# LangChain Ecosystem
-langchain>=0.1.0
-langchain-core>=0.1.0
-langchain-openai>=0.0.8
-langchain-community>=0.0.12
-langgraph>=0.0.26
+# RAG orchestration
+langchain-core>=0.3,<2
+langchain-openai>=0.3,<2
+langchain-ollama>=0.2,<2
+langchain-text-splitters>=0.3,<2
+langgraph>=0.2,<2
 
-# Vector Database
-chromadb>=0.4.0
-faiss-cpu>=1.7.4
+# Retrieval and documents
+faiss-cpu>=1.9,<2
+numpy>=1.26,<3
+pypdf>=5,<7
+tiktoken>=0.8,<1
 
-# Document Processing
-pypdf>=3.17.0
-reportlab>=4.0.0  # For test PDF generation
-
-# AI/ML Dependencies
-tiktoken>=0.5.0
-ragas>=0.1.0
-
-# Environment and Configuration
-python-dotenv>=1.0.0
-
-# Optional: Ollama support (comment out if not needed)
-# langchain-ollama>=0.0.1
-
-# Optional: Web search capabilities
-tavily-python>=0.3.0
-
-# Async HTTP client (for demo script)
-aiohttp>=3.9.0
+# Configuration
+python-dotenv>=1.0,<2

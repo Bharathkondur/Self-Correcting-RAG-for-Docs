@@ -287,3 +287,113 @@ textarea {
     background: var(--sidebar-bg);
     border-radius: 4px;
 }
+
+/* Interactive and evidence panels */
+.file-drop-area.dragging {
+    border-color: var(--accent-color);
+    background: rgba(99, 102, 241, 0.16);
+    transform: translateY(-2px);
+}
+
+.setting-item label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.65rem;
+    color: var(--text-secondary);
+}
+
+.file-item {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.success { color: var(--success-color); }
+.error-message { color: var(--error-color); }
+.processing { color: var(--accent-color); }
+
+.status-dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    background: var(--error-color);
+}
+
+.status-dot.online {
+    background: var(--success-color);
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+}
+
+.trace,
+.sources {
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.trace summary,
+.sources summary {
+    padding: 0.75rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.trace-passed summary { color: var(--success-color); }
+.trace-best_effort summary { color: var(--warning-color); }
+.trace-no_context summary { color: var(--error-color); }
+
+.rag-step {
+    display: grid;
+    gap: 0.25rem;
+    margin: 0.75rem;
+}
+
+.rag-step strong {
+    text-transform: capitalize;
+    color: var(--text-primary);
+}
+
+.rag-step span,
+.source-item p {
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+}
+
+.step-passed { border-left-color: var(--success-color); }
+.step-failed { border-left-color: var(--error-color); }
+.step-retrying { border-left-color: var(--warning-color); }
+
+.answer { white-space: pre-wrap; }
+
+.source-item {
+    padding: 0.9rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.source-item strong {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--accent-color);
+}
+
+#send-btn:disabled,
+textarea:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+@media (max-width: 760px) {
+    body { overflow: auto; }
+    .app-container { min-height: 100vh; height: auto; flex-direction: column; }
+    .sidebar { width: 100%; gap: 1rem; }
+    .chat-interface { min-height: 70vh; }
+    .chat-header, .chat-messages, .chat-input-area { padding: 1rem; }
+    .message { max-width: 100%; }
+}

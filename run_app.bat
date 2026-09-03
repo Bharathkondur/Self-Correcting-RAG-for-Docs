@@ -9,7 +9,7 @@ REM Check if Python is installed
 python --version >nul 2>&1
 if %errorlevel% neq 0 (
     echo ERROR: Python is not installed or not in PATH
-    echo Please install Python 3.8+ and try again
+    echo Please install Python 3.11+ and try again
     pause
     exit /b 1
 )
@@ -30,8 +30,7 @@ echo Server will be available at: http://localhost:8000
 echo Press Ctrl+C to stop the server
 echo.
 
-cd backend
-python app.py
+python -m backend.app
 
 echo.
 echo Server stopped.

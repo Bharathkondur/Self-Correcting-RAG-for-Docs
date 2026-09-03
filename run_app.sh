@@ -11,7 +11,7 @@ echo "Checking environment setup..."
 # Check if Python is installed
 if ! command -v python3 &> /dev/null; then
     echo "ERROR: Python 3 is not installed or not in PATH"
-    echo "Please install Python 3.8+ and try again"
+    echo "Please install Python 3.11+ and try again"
     exit 1
 fi
 
@@ -27,11 +27,9 @@ fi
 
 # Check if requirements are installed
 echo "Checking Python dependencies..."
-cd backend
-
 if ! python3 -c "import fastapi" &> /dev/null; then
     echo "Installing Python dependencies..."
-    python3 -m pip install -r requirements.txt
+    python3 -m pip install -r backend/requirements.txt
 fi
 
 echo "Starting the RAG System..."
@@ -40,4 +38,4 @@ echo "Server will be available at: http://localhost:8000"
 echo "Press Ctrl+C to stop the server"
 echo
 
-python3 app.py
+python3 -m backend.app

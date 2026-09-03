@@ -1,0 +1,28 @@
+[
+  {
+    "question": "What are the three main types of machine learning?",
+    "expected_terms": ["supervised", "unsupervised", "reinforcement"],
+    "expected_page": 1
+  },
+  {
+    "question": "How does retrieval-augmented generation work?",
+    "expected_terms": ["retrieve", "knowledge", "generate"],
+    "expected_page": 1
+  },
+  {
+    "question": "Which industries are listed as AI application areas?",
+    "expected_terms": ["healthcare", "finance", "transportation", "education"],
+    "expected_page": 1
+  },
+  {
+    "question": "What technical considerations are named for implementing AI systems?",
+    "expected_terms": ["data quality", "model selection", "computational resources", "evaluation"],
+    "expected_page": 1
+  },
+  {
+    "question": "What does the document say about underwater basket weaving?",
+    "expected_terms": [],
+    "expected_status": "no_context"
+  }
+]
+

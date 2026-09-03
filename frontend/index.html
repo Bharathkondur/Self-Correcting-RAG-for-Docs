@@ -23,7 +23,8 @@
 
             <div class="upload-section">
                 <h3>Knowledge Base</h3>
-                <div class="file-drop-area" id="drop-zone">
+                <div class="file-drop-area" id="drop-zone" role="button" tabindex="0"
+                    aria-label="Select or drop a PDF document">
                     <i class="fa-solid fa-cloud-arrow-up"></i>
                     <p>Drop PDF here or click</p>
                     <input type="file" id="file-input" accept=".pdf" hidden>
@@ -34,15 +35,15 @@
             <div class="config-section">
                 <h3>Settings</h3>
                 <div class="setting-item">
-                    <label>Temperature</label>
-                    <input type="range" class="slider" min="0" max="1" step="0.1" value="0.5">
+                    <label for="temperature">Temperature <span id="temperature-value">0.2</span></label>
+                    <input id="temperature" type="range" class="slider" min="0" max="1" step="0.1" value="0.2">
                 </div>
             </div>
 
             <div class="status-panel">
                 <div class="status-item">
-                    <span class="status-dot online"></span>
-                    System Ready
+                    <span class="status-dot"></span>
+                    <span id="system-status">Checking backend…</span>
                 </div>
             </div>
         </aside>
@@ -52,8 +53,8 @@
             <header class="chat-header">
                 <h2>Session: <span class="highlight">Enterprise Evaluation</span></h2>
                 <div class="actions">
-                    <button class="icon-btn" title="Clear Chat"><i class="fa-solid fa-trash-can"></i></button>
-                    <button class="icon-btn" title="Export"><i class="fa-solid fa-download"></i></button>
+                    <button id="clear-btn" class="icon-btn" title="Clear chat" aria-label="Clear chat"><i class="fa-solid fa-trash-can"></i></button>
+                    <button id="export-btn" class="icon-btn" title="Export conversation" aria-label="Export conversation"><i class="fa-solid fa-download"></i></button>
                 </div>
             </header>
 
@@ -62,8 +63,8 @@
                     <div class="avatar"><i class="fa-solid fa-robot"></i></div>
                     <div class="content">
                         <h3>Welcome to Self-Correcting RAG for Docs</h3>
-                        <p>I don't just answer; I verify. I will retrieve information, grade my own generation for
-                            hallucinations, and rewrite queries if I don't find what I need.</p>
+                        <p>I retrieve relevant passages, verify the answer against them, and show the real execution
+                            trace and page-level sources.</p>
                         <p>Upload a PDF to get started.</p>
                     </div>
                 </div>

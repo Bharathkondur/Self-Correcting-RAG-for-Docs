@@ -1,38 +1,37 @@
 """
 Self-Correcting RAG System
-A production-ready Retrieval-Augmented Generation system with automated self-correction capabilities.
+A document-scoped Retrieval-Augmented Generation system with auditable self-correction.
 """
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
-with open("README.md", "r", encoding="utf-8") as fh:
+with open("README.md", encoding="utf-8") as fh:
     long_description = fh.read()
 
-with open("backend/requirements.txt", "r", encoding="utf-8") as fh:
+with open("backend/requirements.txt", encoding="utf-8") as fh:
     requirements = [line.strip() for line in fh if line.strip() and not line.startswith("#")]
 
 setup(
     name="self-correcting-rag",
-    version="1.0.0",
-    author="Your Name",
-    author_email="your.email@example.com",
-    description="A production-ready RAG system with automated self-correction capabilities",
+    version="2.0.0",
+    author="Bharath Kondur",
+    description="Corrective RAG with citations, structured grading, and bounded retries",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/self-correcting-rag",
+    url="https://github.com/Bharathkondur/Self-Correcting-RAG-for-Docs",
     packages=find_packages(),
+    package_data={"frontend": ["*.html", "*.css", "*.js"]},
+    include_package_data=True,
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9",
-        "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
     ],
-    python_requires=">=3.8",
+    python_requires=">=3.11",
     install_requires=requirements,
     extras_require={
         "dev": [
@@ -50,8 +49,8 @@ setup(
     },
     keywords="rag, langchain, ai, nlp, retrieval, generation, self-correction, llm",
     project_urls={
-        "Bug Reports": "https://github.com/yourusername/self-correcting-rag/issues",
-        "Source": "https://github.com/yourusername/self-correcting-rag",
-        "Documentation": "https://github.com/yourusername/self-correcting-rag#readme",
+        "Bug Reports": "https://github.com/Bharathkondur/Self-Correcting-RAG-for-Docs/issues",
+        "Source": "https://github.com/Bharathkondur/Self-Correcting-RAG-for-Docs",
+        "Documentation": "https://github.com/Bharathkondur/Self-Correcting-RAG-for-Docs#readme",
     },
 )

@@ -1,0 +1,13 @@
+.git
+.github
+.venv
+__pycache__
+*.pyc
+*.pdf
+*.log
+.env
+backend/.env
+tests
+htmlcov
+.coverage
+

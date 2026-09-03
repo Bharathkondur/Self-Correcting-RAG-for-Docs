@@ -39,8 +39,8 @@ Thank you for your interest in contributing to the Self-Correcting RAG System! T
 
 ```bash
 # Clone your fork
-git clone https://github.com/yourusername/self-correcting-rag.git
-cd self-correcting-rag
+git clone https://github.com/Bharathkondur/Self-Correcting-RAG-for-Docs.git
+cd Self-Correcting-RAG-for-Docs
 
 # Create virtual environment
 python -m venv venv

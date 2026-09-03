@@ -23,19 +23,16 @@ COPY frontend/ ./frontend/
 COPY README.md ./
 COPY LICENSE ./
 
-# Create logs directory
-RUN mkdir -p logs
-
 # Expose port
 EXPOSE 8000
 
 # Set environment variables
 ENV PYTHONPATH=/app
-ENV LOG_FILE=/app/logs/rag_system.log
+ENV PYTHONUNBUFFERED=1
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost:8000/ || exit 1
+    CMD curl -f http://localhost:8000/api/health || exit 1
 
 # Run the application
-CMD ["python", "backend/app.py"]
+CMD ["python", "-m", "backend.app"]
